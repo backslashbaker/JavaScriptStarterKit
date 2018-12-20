@@ -17,20 +17,20 @@ describe('set', () => {
     expect(set.turnListIntoSet(list)).toEqual(list);
   })
 
-  it('it returns a list, with no duplicates', () => {
-    const list = [1, 1];
-    const result = [1]
-    expect(set.turnListIntoSet(list)).toEqual(result);
-  })
+  // it('it returns a list, with no duplicates', () => {
+  //   const list = [1, 1];
+  //   const result = [1]
+  //   expect(set.turnListIntoSet(list)).toEqual(result);
+  // })
 
-  it('loops through a list, to see if there are any duplicate values', () => {
-    const list = [1, 2, 3]
-    expect(set.doesListContainDuplicates(list)).toBe(false)
-  })
+  // it('loops through a list, to see if there are any duplicate values', () => {
+  //   const list = [1, 2, 3]
+  //   expect(set.doesListContainDuplicates(list)).toBe(false)
+  // })
 
-  it('loops through a list, to see if there are any duplicate values', () => {
-    const list = [1, 2, 2, 3]
-    expect(set.doesListContainDuplicates(list)).toBe(true)
-  })
+  // it('loops through a list, to see if there are any duplicate values', () => {
+  //   const list = [1, 2, 2, 3]
+  //   expect(set.doesListContainDuplicates(list)).toBe(true)
+  // })
   
 });

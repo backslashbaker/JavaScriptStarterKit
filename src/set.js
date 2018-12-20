@@ -1,31 +1,15 @@
 export class DerekSet {
-  turnListIntoSet(listItems) {
-    // takes list with duplicates and returns new list without duplicates
+  turnListIntoSet(listItems){
     let memory = []
-    for(let indexInTheList = 0; indexInTheList < listItems.length; indexInTheList += 1) {
-      let item = listItems[indexInTheList];
-
-      if (!memory.includes(item)) {
-        memory.push(item)
+    console.log('list', listItems);
+    for (let index = 0; index < listItems.length; index++) {
+      console.log('index', index);
+      let item = listItems[index]
+      if (!memory.includes(item)){
+        memory.push(item);
+        console.log(memory)
       }
     }
     return memory;
   }
-
-  doesListContainDuplicates(list){
-    let memory = []
-    for(let indexInTheList = 0; indexInTheList < list.length; indexInTheList += 1) {
-      let item = list[indexInTheList];
-
-      if (memory.includes(item)) {
-        return true;
-      } else {
-        memory.push(item)
-      }
-    }
-    return false;
-  }
-
 }
-
-
