@@ -1,13 +1,31 @@
-class Numbers {
+export class DerekSet {
+  turnListIntoSet(listItems) {
+    // takes list with duplicates and returns new list without duplicates
+    let memory = []
+    for(let indexInTheList = 0; indexInTheList < listItems.length; indexInTheList += 1) {
+      let item = listItems[indexInTheList];
 
-  addToNumber(startingNumber, numberToAdd) {
-    return startingNumber + numberToAdd;
+      if (!memory.includes(item)) {
+        memory.push(item)
+      }
+    }
+    return memory;
   }
 
-  addOneToAll(numbers) {
-    return numbers.map(number => this.addToNumber(number, 1));
+  doesListContainDuplicates(list){
+    let memory = []
+    for(let indexInTheList = 0; indexInTheList < list.length; indexInTheList += 1) {
+      let item = list[indexInTheList];
+
+      if (memory.includes(item)) {
+        return true;
+      } else {
+        memory.push(item)
+      }
+    }
+    return false;
   }
+
 }
 
-// This is how we can use these functions in other files
-module.exports = { Numbers };
+
